@@ -57,6 +57,12 @@ variable "instance_volume_size" {
   default     = 30
 }
 
+variable "require_imdsv2" {
+  description = "Require instances to use Instance Metadata Service V2"
+  type = bool
+  default = false
+}
+
 variable "ebs_block_devices" {
   description = "Additional EBS block devices to attach to the instance."
   type        = list(map(string))
