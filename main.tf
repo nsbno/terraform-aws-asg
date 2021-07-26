@@ -75,7 +75,7 @@ resource "aws_launch_configuration" "main" {
   metadata_options {
     # Require use of IMDSv2
     http_endpoint = "enabled"
-    http_put_response_hop_limit = 1
+    http_put_response_hop_limit = var.imdsv2_hops
     http_tokens = var.require_imdsv2 ? "required" : "optional"
   }
 

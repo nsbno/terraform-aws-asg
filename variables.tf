@@ -63,6 +63,12 @@ variable "require_imdsv2" {
   default = false
 }
 
+variable "imdsv2_hops" {
+  description = "How many hops to allow for IMDSv2 token requests."
+  type = number
+  default = 1
+}
+
 variable "ebs_block_devices" {
   description = "Additional EBS block devices to attach to the instance."
   type        = list(map(string))
